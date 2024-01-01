@@ -1,0 +1,417 @@
+$lightGreen : #b9e7e7;
+
+.app{
+    display: flex;
+    justify-content: center;
+ 
+    .container{
+        width:1024px;
+
+        //Login and Register
+        .auth{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        
+            
+            background-color:$lightGreen;
+            flex-direction: column;
+
+            h1{
+                font-size: 20px;
+                color: teal;
+                margin-bottom: 20px;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                background-color: white;
+                padding: 20px;
+
+                input{
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid grey;
+                }
+
+                button{
+                    cursor: pointer;
+                    border: none;
+                    padding: 10px;
+                    background-color: teal;
+                    color: white;
+                }
+
+                span{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 12px;
+                    text-align: center;
+                }
+
+                p{
+                    font-size: 12px;
+                    text-align: center;
+                    color: red;
+                }
+
+            }
+            
+        }
+
+        //navbar
+        .container{
+            padding: 1opx 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 100px;
+            .logo{
+
+                img{
+                    height:70px;
+                    border-radius: 50%;
+                }
+            }
+            .links{
+                
+                display: flex;
+                gap: 10px;
+                text-decoration: none;
+                align-items: center;
+                color:inherit;
+               .link{
+                text-decoration: none;
+                color:inherit;
+              
+                :hover{
+                    background-color: rgb(164, 221, 43);
+                   }
+               }
+
+               
+               .homelink{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 50px;
+                text-decoration: none;
+                color: inherit;
+                background-color: rgb(164, 221, 43);
+                border-radius: 50%;
+
+                
+                &:hover{
+                    color:teal;
+                    background-color: white;
+                    border: 1px solid teal;
+                }
+               }
+
+               
+
+               span{
+                cursor: pointer;
+               }
+
+               .write{
+                text-decoration: none;
+                background-color: $lightGreen;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content:center;
+                border: 1px solid white;
+                &:hover{
+                    color:teal;
+                    background-color: white;
+                    border: 1px solid teal;
+                }
+               }
+
+               
+
+
+
+            
+            }
+        }
+
+        //footer
+
+        footer{
+            margin-top: 100px;
+            padding: 20px;
+            background-color: $lightGreen;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+
+
+            img{
+                height: 50px;
+                width: 50px;
+            }
+        }
+
+        //Home
+        .home{
+            .link{
+                text-decoration: none;
+                color:inherit;
+               }
+            .posts{
+                margin-top: 80px;
+                gap: 150px;
+                display: flex;
+                flex-direction: column;
+
+                .post{
+                    display: flex;
+                    gap: 100px;
+                    margin-bottom: 100px;
+
+                    &:nth-child(2n+1){
+                       
+                        flex-direction: row-reverse;
+                    }
+                
+
+                .img{
+                    
+                
+                    position: relative;
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color:rgba(96, 96, 97, 0.604);
+                        top: 20px;
+                        left: -20px;
+                        z-index: -1;
+                    }
+                    
+
+                    img{
+                        flex: 2;
+                        max-width: 500px;
+                        min-width: 100px;
+                        min-height: 100px;
+                        max-height: 500px;
+                        object-fit: cover;
+
+                       
+                    }
+                }
+                .content{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    flex:3
+
+                    h1{
+                        font-size: 48px;
+                    }
+
+                    p{
+                        font-size: 18px;
+                    }
+
+                    button{
+                        width: max-content;
+                        padding: 10px 20px;
+                        border: none;
+                        background-color: white;
+                        border: 1px solid teal;
+                        color: teal;
+
+                        &:hover{
+                            border: 1px solid white;
+                            background-color: $lightGreen;
+                            color: black;
+
+                        }
+                    }
+                }
+            }
+            }
+
+        }
+
+        //Single page
+
+        .single{
+            display: flex;
+            gap:50px;
+
+            .content{
+                flex:5;
+                img{
+                    width: 100%;
+                    height: 300px;
+                    object-fit: cover;
+                }
+
+                .user{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 14px;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50px;
+                        object-fit: cover;
+                    }
+
+                    span{
+                        font-weight: bold;
+                    }
+
+                    .edit{
+                        img{
+                            height: 20px;
+                            width: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            p{
+
+                text-align: justify;
+            }
+
+            .menu{
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                h1{
+                    font-size: 20px;
+                    color: #555;
+                }
+
+                .post{
+                    display: flex;
+                    flex-direction: column;
+                    gap:10px;
+                    
+                    img{
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+                    h2{
+                        color:#555;
+                    }
+
+                    button{
+                        width: max-content;
+                        padding: 8px 15px;
+                        border: none;
+                        background-color: white;
+                        border: 1px solid teal;
+                        color: teal;
+
+                        &:hover{
+                            border: 1px solid white;
+                            background-color: $lightGreen;
+                            color: black;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        //Write
+
+        .add{
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+
+            .content{
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input{
+                    padding: 10px;
+                }
+
+                .editorContainer{
+                    height: 300px;
+                    overflow: scroll;
+                    border: 1px solid lightgrey;
+                }
+
+                .editor{
+                    height: 100%;
+                    border:none
+                }
+            }
+
+            .menu{
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .item{
+                    
+                    border: 1px solid lightgrey;
+                    padding: 10px;
+                    flex: 1;
+                    
+                    .buttons{
+                        display: flex;
+                        justify-content: space-between;
+
+                        :first-child{
+                            cursor: pointer;
+                            color: teal;
+                            background-color: white;
+                            border: 1px solid teal;
+                            padding: 3px 5px;
+
+                        }
+
+                        :last-child{
+                            cursor: pointer;
+                            background-color: teal;
+                            color: white;
+                            padding: 3px 5px;
+                            border : 1px solid white;
+
+                        }
+                    }
+                    
+                    
+                    
+                }
+
+            }
+        }
+
+
+       
+        
+
+
+
+    }
+}
